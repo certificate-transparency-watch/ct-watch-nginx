@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+
+docker build -t=ct-watch-nginx .
+docker stop service-ct-watch-nginx || true
+docker rm service-ct-watch-nginx || true
+docker run -d -p 80:80 --name=service-ct-watch-nginx ct-watch-nginx
