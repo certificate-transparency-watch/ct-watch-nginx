@@ -11,4 +11,4 @@ ExecStart=/usr/bin/docker run -p 80:80 -p 443:443 --name=service-nginx nginx
 ExecStop=/usr/bin/docker stop -t 2 service-nginx
 
 [Install]
-WantedBy=local.target
+WantedBy=multi-user.target
