@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:14.10
 MAINTAINER tom@tom-fitzhenry.me.uk
 
 RUN apt-get update
