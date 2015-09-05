@@ -9,11 +9,6 @@ ADD . /src
 RUN cp /src/nginx.conf /etc/nginx/conf.d/default.conf
 RUN mkdir /etc/nginx/conf
 RUN rm /etc/nginx/sites-enabled/default
-RUN mkdir /etc/nginx/ssl
-RUN cp /src/blog.tom-fitzhenry.me.uk.crt /etc/nginx/ssl
-RUN cp /src/blog.tom-fitzhenry.me.uk.key /etc/nginx/ssl
-RUN cp /src/www.tom-fitzhenry.me.uk.crt /etc/nginx/ssl
-RUN cp /src/www.tom-fitzhenry.me.uk.key /etc/nginx/ssl
 RUN sed -i '1s/^/daemon off;\n/' /etc/nginx/nginx.conf
 
 
