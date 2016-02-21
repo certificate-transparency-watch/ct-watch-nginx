@@ -1,12 +1,15 @@
 language: generic
 
 sudo: required
+
 services:
 - docker
+
 script:
 - docker login -u tomfitzhenry -p $BINTRAY_API_KEY -e tom@tom-fitzhenry.me.uk certificate-transparency-watch-docker-ct-watch-registry.bintray.io
 - docker build -t certificate-transparency-watch-docker-ct-watch-registry.bintray.io/ct-watch-nginx .
 - docker push certificate-transparency-watch-docker-ct-watch-registry.bintray.io/ct-watch-nginx
+
 env:
   global:
     secure: OGv/3lz9nYs78ZmsfFOgohWT5inRLYwGzjtXRgulJ8bJtzGL7MFBoGCxF+5OaIWcQmJeX+65qMw5tPZX3GPdxX++fFXILACh29Xc5t2pw82cOpbHQV2klHSudSUcvm3Ox6LW7moWV9SV8W5ibK/dxyurwpYMQBj5XLK56645o/w=
