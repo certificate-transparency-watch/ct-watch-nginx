@@ -5,8 +5,7 @@ services:
 - docker
 script:
 - docker login -u tomfitzhenry -p $BINTRAY_API_KEY -e tom@tom-fitzhenry.me.uk certificate-transparency-watch-docker-ct-watch-registry.bintray.io
-- docker build -t certificate-transparency-watch-docker-ct-watch-registry.bintray.io/ct-watch-nginx
-  .
+- docker build -t certificate-transparency-watch-docker-ct-watch-registry.bintray.io/ct-watch-nginx .
 - docker push certificate-transparency-watch-docker-ct-watch-registry.bintray.io/ct-watch-nginx
 env:
   global:
