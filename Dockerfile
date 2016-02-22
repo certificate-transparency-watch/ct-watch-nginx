@@ -11,8 +11,6 @@ RUN mkdir /etc/nginx/conf
 RUN rm /etc/nginx/sites-enabled/default
 RUN sed -i '1s/^/daemon off;\n/' /etc/nginx/nginx.conf
 
-
 EXPOSE 80
-EXPOSE 443
 
 CMD /usr/sbin/nginx

@@ -7,7 +7,7 @@ After=docker.service
 Restart=always
 RestartSec=10
 ExecStartPre=-/usr/bin/docker rm service-nginx
-ExecStart=/usr/bin/docker run -p 80:80 -p 443:443 --name=service-nginx certificate-transparency-watch-docker-ct-watch-registry.bintray.io/ct-watch-nginx
+ExecStart=/usr/bin/docker run -p 80:80 --name=service-nginx certificate-transparency-watch-docker-ct-watch-registry.bintray.io/ct-watch-nginx
 ExecStop=/usr/bin/docker stop -t 2 service-nginx
 
 [Install]
